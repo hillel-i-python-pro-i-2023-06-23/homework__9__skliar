@@ -1,0 +1,10 @@
+#always
+flake8==6.0.0
+black==23.7.0
+pyupgrade==3.9.0
+requests==2.31.0
+pre-commit==3.3.3
+
+#optional
+Faker==19.1.0
+

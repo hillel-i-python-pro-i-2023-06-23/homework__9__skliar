@@ -1,0 +1,9 @@
+# Ignore all
+**
+
+# Exclude
+!app
+!run.py
+!requirements.txt
+!files_input
+!files_output
