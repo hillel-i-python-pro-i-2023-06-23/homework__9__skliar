@@ -19,6 +19,8 @@ RUN pip install --upgrade pip && \
 
 COPY --chown=${USER} ./run.py run.py
 COPY --chown=${USER} ./app app
+COPY --chown=${USER} ./data_base data_base
+COPY --chown=${USER} ./templates templates
 
 USER ${USER}
 

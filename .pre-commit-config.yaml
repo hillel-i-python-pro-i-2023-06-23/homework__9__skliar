@@ -15,13 +15,22 @@ repos:
 - repo: local
 
   hooks:
+
+    - id: flake8
+      name: Flake8
+      entry: flake8
+      language: system
+      types: [ python ]
+      args: [ ]
+
+
     - id: black
       name: black
       entry: black
       language: system
-      types: [python]
-      args: [--line-length=120, --target-version=py37]
-      exclude: ^venv/
+      types: [ python ]
+      args: [ --line-length=120, --target-version=py37 ]
+      exclude: ^venv/|read_all_table.py
 
     - id: pyupgrade
       name: pyupgrade
@@ -30,12 +39,7 @@ repos:
       types: [python]
       args: [--py37-plus]
 
-    - id: flake8
-      name: Flake8
-      entry: flake8
-      language: system
-      types: [python]
-      args: []
+
 
 #    - id: reorder-python-imports
 #      name: reorder-python-imports

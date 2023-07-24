@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DZ_9</title>
+</head>
+<body>
+<h1>Добавление данных в таблицу</h1>
+<form method="POST" action="/add">
+    <label for="name">Имя:</label>
+    <input type="text" name="name" required><br>
+
+    <label for="phone_value">Номер телефона:</label>
+    <input type="text" name="phone_value" pattern="[0-9]+" required><br>
+
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
