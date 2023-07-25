@@ -16,6 +16,13 @@ repos:
 
   hooks:
 
+    - id: pyupgrade
+      name: pyupgrade
+      entry: pyupgrade
+      language: system
+      types: [python]
+      args: [--py37-plus]
+
     - id: flake8
       name: Flake8
       entry: flake8
@@ -30,14 +37,9 @@ repos:
       language: system
       types: [ python ]
       args: [ --line-length=120, --target-version=py37 ]
-      exclude: ^venv/|read_all_table.py
+      exclude: ^venv/
 
-    - id: pyupgrade
-      name: pyupgrade
-      entry: pyupgrade
-      language: system
-      types: [python]
-      args: [--py37-plus]
+
 
 
 
