@@ -92,6 +92,7 @@ def update_user():
 
 @app.route("/delete", methods=["POST", "GET"])
 def delete_string():
+    status = None
     if request.method == "POST":
         delete_ID = request.form["ID"]
 

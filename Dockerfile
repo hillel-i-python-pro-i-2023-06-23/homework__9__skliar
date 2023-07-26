@@ -19,9 +19,13 @@ RUN pip install --upgrade pip && \
 
 COPY --chown=${USER} ./run.py run.py
 COPY --chown=${USER} ./app app
-#COPY --chown=${USER} ./data_base data_base
 COPY --chown=${USER} ./templates templates
 
 USER ${USER}
+
+# создаю и говорю что это моя рабочая директория для БД, шоб она создавалась только внутри контейнера, БД хранится до тех пор, пока открыт контейнер, потом удаляется
+RUN mkdir -p /wd/data_base
+
+WORKDIR /wd
 
 ENTRYPOINT ["python", "run.py"]
