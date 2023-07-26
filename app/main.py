@@ -90,4 +90,24 @@ def update_user():
     return render_template("update.html")
 
 
+@app.route("/delete", methods=["POST", "GET"])
+def delete_string():
+    if request.method == "POST":
+        delete_ID = request.form["ID"]
+
+        with DBConnection() as connection:
+            with connection:
+                result = connection.execute("SELECT * FROM phones WHERE phone_ID = ?", (delete_ID,)).fetchone()
+                if result:
+                    connection.execute(
+                        "DELETE FROM phones WHERE phone_ID = ?",
+                        (delete_ID),
+                    )
+                    status = "удалено"
+                else:
+                    status = "Запись с указанным phone_ID не найдена"
+
+    return render_template("delete.html", status=status)
+
+
 create_table()
