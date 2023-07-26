@@ -1,7 +1,5 @@
 from app.services.db_connection import DBConnection
 
-# from flask import request
-
 
 def read_row(phone_ID_to_find):
     with DBConnection() as connection:
