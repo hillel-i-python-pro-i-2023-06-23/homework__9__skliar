@@ -24,8 +24,8 @@ COPY --chown=${USER} ./templates templates
 USER ${USER}
 
 # создаю и говорю что это моя рабочая директория для БД, шоб она создавалась только внутри контейнера, БД хранится до тех пор, пока открыт контейнер, потом удаляется
-RUN mkdir -p /wd/data_base
+#RUN mkdir -p /wd/data_base
 
-WORKDIR /wd
+#WORKDIR /wd
 
 ENTRYPOINT ["python", "run.py"]

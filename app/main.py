@@ -13,7 +13,7 @@ app = Flask(__name__, template_folder=current_dir.parent / "templates")
 
 @app.route("/")
 def main():
-    return "hello"
+    return "hello   /all    /add      /choose     /update     /delete"
 
 
 @app.route("/all")
